@@ -7,18 +7,10 @@ import ArrowDropRightIcon from '@material-ui/icons/ArrowRight';
 import ArrowDropLeftIcon from '@material-ui/icons/ArrowLeft';
 import Grid from '@material-ui/core/Grid';
 
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-    },
-  },
-}));
-
+// Functional component
 function ToyRobot () {
  
-  const [directionValue, setDirectionValue] = useState(""); // used hooks to set value for direction value.
+  const [directionValue, setDirectionValue] = useState(""); 
   const [movedDirectionValue, setMovedDirectionValue] = useState("");
   const [msg,setMsg] = useState("");
   const errMsg = "Invalid Move";
@@ -27,6 +19,7 @@ function ToyRobot () {
   const [X, setX] = useState(0);
   const [Y, setY] = useState(0);
 
+  // Robot Movement 
   const move = (direction: string) => {
     setIsMove(false);
     switch(direction){
@@ -89,13 +82,13 @@ function ToyRobot () {
     
   },[directionValue,X,Y]);
 
+  //Button Click handler
   const directionClick = (type: string) => {
     setDirectionValue(type);
     setIsMove(true);
   };
-
-  const classes = useStyles();
-
+  
+// View
   return(
     <Grid item xs={12}>
       <Grid item xs={12} style={{display:'flex'}}>
