@@ -14,9 +14,6 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
     },
   },
-  extendedIcon: {
-    // marginRight: theme.spacing(1),
-  },
 }));
 
 function ToyRobot () {
@@ -105,7 +102,7 @@ function ToyRobot () {
         <Grid item xs={4}></Grid>
         <Grid item xs={4}>
           <Fab color="secondary" aria-label="North"  onClick={() => directionClick("North")}>
-            <ArrowDropUpIcon className={classes.extendedIcon} fontSize='large' />
+            <ArrowDropUpIcon fontSize='large' />
           </Fab>
         </Grid>
         <Grid item xs={4}></Grid>
@@ -113,17 +110,17 @@ function ToyRobot () {
       <Grid item xs={12} style={{display:'flex'}}>
         <Grid item xs={4}>
           <Fab color="secondary" aria-label="West"  onClick={() => directionClick("West")}>
-            <ArrowDropLeftIcon className={classes.extendedIcon} fontSize='large' />
+            <ArrowDropLeftIcon fontSize='large' />
           </Fab>
         </Grid>
         <Grid item xs={4}>
           <Fab color="secondary" aria-label="South"  onClick={() => directionClick("South")}>
-            <ArrowDropDownIcon className={classes.extendedIcon} fontSize='large' />
+            <ArrowDropDownIcon fontSize='large' />
           </Fab>
         </Grid>
         <Grid item xs={4}>
           <Fab color="secondary" aria-label="East"  onClick={() => directionClick("East")}>
-            <ArrowDropRightIcon className={classes.extendedIcon} fontSize='large' />
+            <ArrowDropRightIcon fontSize='large' />
           </Fab>
         </Grid>
       </Grid>
